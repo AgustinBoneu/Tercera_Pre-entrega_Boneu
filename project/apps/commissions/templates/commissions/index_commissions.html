@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}
+<h1 style = "color: blue;">COMISIONES</h1>
+{% endblock TITULO %}
+
+{% block CONTENIDO %}
+    {% for commission in commissions %} 
+    <h2>{{commission.id}}</h2>
+    <h2>{{commission.date}}</h2>
+    <h2>{{commission.category}}</h2> 
+    <p>{{commission.name}}</p>
+    <p>{{commission.type}}</p>
+    <p>{{commission.amount}}</p>
+    {% endfor %}
+
+    <a href="{% url 'index' %}">Volver al menú principal</a>
+{% endblock CONTENIDO %}

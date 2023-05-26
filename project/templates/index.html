@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block CONTENIDO %}
+<p>Estamos dedicados a ayudar a los bancos a aumentar su productividad y mejorar sus resultados.</p>
+        <p> En nuestro sitio web, de acuerdo al paquete que usted solicite, contará con distintas herramientas para lograr estos objetivos.</p>
+        <p>Explore nuestro sitio para obtener más información y no dude en ponerse en contacto con nosotros si tiene alguna pregunta o necesita ayuda.</p>
+<a href = "{% url 'commissions:index' %}">Ir a Comisiones</a>
+<a href = "{% url 'othersbanks:index' %}">Ir a Comisiones de otros bancos</a>
+{% endblock CONTENIDO %}
