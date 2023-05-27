@@ -6,12 +6,12 @@
 
 {% block CONTENIDO %}
 
-    {% for commission in commissions %} 
-    <h2>{{commission.id}}</h2>
-    <h2>{{commission.category}}</h2> 
-    <p>{{commission.name}}</p>
+    {% for discount in discounts %} 
+    <h2>{{discount.id_commission_discount}}</h2>
+    <h2>{{discount.name_client}}</h2> 
+    <p>{{discount.percent_discount}}</p>
     {% endfor %}
 
     <a href="{% url 'index' %}">Volver al menú principal</a>
-
+    
 {% endblock CONTENIDO %}

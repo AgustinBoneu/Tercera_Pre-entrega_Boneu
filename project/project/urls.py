@@ -22,5 +22,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", index, name='index'),
     path('commissions/', include('commissions.urls','commissions')),
-    path('othersbanks/', include('othersbanks.urls','othersbanks')),
 ]
