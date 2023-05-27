@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 
 {% block TITULO %}
-<h1 style = "color: blue;">COMISIONES</h1>
+<h1 style = "color: blue;">INGRESO DE COMISIONES</h1>
 {% endblock TITULO %}
 
 {% block CONTENIDO %}
-
     {% for input in inputs %} 
     <h2>{{input.id_commission}}</h2>
-    <h2>{{input.name_employee}}</h2> 
+    <p>{{input.name_employee}}</p> 
     <p>{{input.date}}</p>
     <p>{{input.type}}</p>
     <p>{{input.amount}}</p>
-    {% endfor %}
+{% endfor %}
 
     <a href="{% url 'index' %}">Volver al menú principal</a>
     

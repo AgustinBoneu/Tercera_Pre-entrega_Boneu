@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
 
 {% block TITULO %}
-<h1 style = "color: blue;">COMISIONES</h1>
+<h1 style = "color: blue;">DESCUENTOS DE COMISIONES</h1>
 {% endblock TITULO %}
 
 {% block CONTENIDO %}
-
     {% for discount in discounts %} 
     <h2>{{discount.id_commission_discount}}</h2>
-    <h2>{{discount.name_client}}</h2> 
+    <p>{{discount.name_client}}</p> 
     <p>{{discount.percent_discount}}</p>
-    {% endfor %}
+{% endfor %}
 
     <a href="{% url 'index' %}">Volver al menú principal</a>
     
