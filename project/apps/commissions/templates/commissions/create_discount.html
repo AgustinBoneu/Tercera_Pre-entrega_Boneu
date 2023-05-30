@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}
+    <h1 style = "color: red;">CREAR DESCUENTO</h1>
+{% endblock %}
+
+{% block CONTENIDO %}
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">GUARDAR</button>
+    </form>
+    <br>
+    <br> 
+    <a href="{% url 'index' %}">Volver al menú principal</a> 
+{% endblock CONTENIDO %}

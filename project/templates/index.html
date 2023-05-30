@@ -1,10 +1,28 @@
 {% extends 'base.html' %}
 
 {% block CONTENIDO %}
-<p>Estamos dedicados a ayudar a los bancos a aumentar su productividad y mejorar sus resultados.</p>
-        <p> En nuestro sitio web, de acuerdo al paquete que usted solicite, contará con distintas herramientas para lograr estos objetivos.</p>
-        <p>Explore nuestro sitio para obtener más información y no dude en ponerse en contacto con nosotros si tiene alguna pregunta o necesita ayuda.</p>
-<a href = "{% url 'commissions:index_1' %}">Ir a Comisiones</a>
-<a href = "{% url 'commissions:index_2' %}">Ir a Ingresos de comisiones</a>
-<a href = "{% url 'commissions:index_3' %}">Ir a Descuentos de comisiones</a>
+<p style = "color: blue;">Estamos dedicados a ayudar a los bancos a aumentar su productividad y mejorar sus resultados.</p>
+<p style = "color: blue;"> En nuestro sitio web, de acuerdo al paquete que usted solicite, contará con distintas herramientas para lograr estos objetivos.</p>
+<p style = "color: blue;">Explore nuestro sitio para obtener más información y no dude en ponerse en contacto con nosotros si tiene alguna pregunta o necesita ayuda.</p>
 {% endblock CONTENIDO %}
+
+{% block CONTENIDO1 %}
+<h2>Ingresar datos a la Base</h2>
+<p>1.<a href = "{% url 'commissions:create commission' %}">Creación rápida de comisiones</a></p>
+<p>2.<a href = "{% url 'commissions:create unique commission' %}">Creación de comisiones</a></p>
+<p>3.<a href = "{% url 'commissions:create input' %}">Ingreso de comisiones</a></p>
+<p>4.<a href = "{% url 'commissions:create discount' %}">Descuento en comisiones</a></p>
+{% endblock CONTENIDO1 %}
+
+{% block CONTENIDO2 %}
+<h2>Consultar la Base de Datos</h2>
+<p>1.<a href = "{% url 'commissions:index_1' %}">Ir a Comisiones</a></p>
+<p>2.<a href = "{% url 'commissions:index_2' %}">Ir a Ingresos de comisiones</a></p>
+<p>3.<a href = "{% url 'commissions:index_3' %}">Ir a Descuentos de comisiones</a></p>
+{% endblock CONTENIDO2 %}
+
+{% block CONTENIDO3 %}
+<h2><u>¡SUS DATOS SE ENCUENTRAN RESGUARDADOS!</u></h2>
+{% endblock CONTENIDO3 %}
+
+

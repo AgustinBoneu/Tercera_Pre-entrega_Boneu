@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block TITULO %}
-<h1 style = "color: blue;">INGRESO DE COMISIONES</h1>
+    <h1 style = "color: blue;">INGRESO DE COMISIONES</h1>
 {% endblock TITULO %}
 
 {% block CONTENIDO %}
@@ -11,8 +11,8 @@
     <p>{{input.date}}</p>
     <p>{{input.type}}</p>
     <p>{{input.amount}}</p>
-{% endfor %}
-
+    {% endfor %}
+    <br>
+    <br>
     <a href="{% url 'index' %}">Volver al menú principal</a>
-    
 {% endblock CONTENIDO %}

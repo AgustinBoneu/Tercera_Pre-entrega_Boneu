@@ -11,7 +11,7 @@ class Identification_Commissions_Bank_USF(models.Model):
     def __str__(self):
         return self.name
 class Input_CommissionsBank_USF(models.Model): 
-    id_commission= models.ForeignKey(Identification_Commissions_Bank_USF, on_delete=models.CASCADE)
+    id_commission= models.IntegerField(primary_key=True)
     name_employee = models.CharField(max_length=50)
     date = models.DateField()
     type = models.CharField(max_length=50, choices= CURRENCY_CHOICES, default='PESOS')
@@ -21,9 +21,9 @@ class Input_CommissionsBank_USF(models.Model):
         return self.name_employee
 
 class Discount_CommissionsBank_USF(models.Model): 
-    id_commission_discount = models.ForeignKey(Identification_Commissions_Bank_USF, on_delete=models.CASCADE)
+    id_commission_discount =models.IntegerField(primary_key=True)
     name_client = models.CharField(max_length=50)
-    percent_discount = models.IntegerField(primary_key=True)
+    percent_discount = models.IntegerField()
     def __str__(self):
         return self.name_client
 

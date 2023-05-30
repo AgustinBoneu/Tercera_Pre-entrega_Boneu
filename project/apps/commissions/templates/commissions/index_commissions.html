@@ -1,17 +1,16 @@
 {% extends 'base.html' %}
 
 {% block TITULO %}
-<h1 style = "color: blue;">COMISIONES</h1>
+    <h1 style = "color: blue;">COMISIONES</h1>
 {% endblock TITULO %}
 
 {% block CONTENIDO %}
-
     {% for commission in commissions %} 
     <h2>{{commission.id}}</h2>
     <p>{{commission.category}}</p> 
     <p>{{commission.name}}</p>
     {% endfor %}
-
+    <br>
+    <br>
     <a href="{% url 'index' %}">Volver al menú principal</a>
-
 {% endblock CONTENIDO %}
