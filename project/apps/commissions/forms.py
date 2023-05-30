@@ -1,7 +1,7 @@
 from django import forms
 from . import models
 
-CURRENCY_CHOICES = [('$', 'PESOS'),('US$', 'DÓLARES'),('%', 'PORCENTAJE')]
+CURRENCY_CHOICES = [('$', 'PESOS'),('US$', 'DÓLARES')]
 
 class Identification_Commissions_Bank_USFForm(forms.ModelForm):
     class Meta:

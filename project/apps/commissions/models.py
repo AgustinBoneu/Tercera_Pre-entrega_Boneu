@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-CURRENCY_CHOICES = [('$', 'PESOS'),('US$', 'DÓLARES'),('%', 'PORCENTAJE')]
+CURRENCY_CHOICES = [('$', 'PESOS'),('US$', 'DÓLARES')]
 
 
 class Identification_Commissions_Bank_USF(models.Model):
