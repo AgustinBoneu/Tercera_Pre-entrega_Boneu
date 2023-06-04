@@ -52,36 +52,27 @@ def create_commission(request):
         context = {"form1": form1, "form2": form2, "form3": form3}
     return render (request,"commissions/create.html",context)
 
-def create_unique_commission(request):  
-    if request.method == "POST":
-        form = forms.Identification_Commissions_Bank_USFForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("index")
-    else: 
-        form = forms.Identification_Commissions_Bank_USFForm()
-        context = {"form": form}
+def create_unique_commission(request): 
+    form = forms.Identification_Commissions_Bank_USFForm(request.POST) 
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        return redirect("index")
+    context = {"form": form}
     return render (request,"commissions/create_unique.html",context)
 
-def create_input(request):  
-    if request.method == "POST":
-        form = forms.Input_CommissionsBank_USFForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("index")
-    else: 
-        form = forms.Input_CommissionsBank_USFForm()
-        context = {"form": form}
+def create_input(request): 
+    form = forms.Input_CommissionsBank_USFForm(request.POST) 
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        return redirect("index")
+    context = {"form": form}
     return render (request,"commissions/create_input.html",context)
 
 def create_discount(request):  
-    if request.method == "POST":
-        form = forms.Discount_CommissionsBank_USFForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect("index")
-    else: 
-        form = forms.Discount_CommissionsBank_USFForm()
-        context = {"form": form}
+    form = forms.Discount_CommissionsBank_USFForm(request.POST)
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        return redirect("index")
+    context = {"form": form}
     return render (request,"commissions/create_discount.html",context)
 
